@@ -1,0 +1,63 @@
+// Colors
+$green: #1b8366;
+$light-green: #57c478;
+$yellow: #ffdd0e;
+$dark-yellow: #e9ae0b;
+
+$white: #ffffff;
+// Font size
+$font-size-large: 1.8rem;
+$font-size-small: 1.4rem;
+$font-size-msmall: 1.2rem;
+$font-size-xsmall: 1rem;
+// Spacing
+$xs-size: 0.6rem;
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+$desktop-breakpoint: 45rem;
+
+.app-bar{
+    background-color: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid;
+    border-color: #f1f1f1 !important;
+}
+
+.v-btn:before{
+    background-color: transparent;
+}
+.v-toolbar__content > .v-btn.v-btn--icon:first-child + .v-toolbar__title{
+    padding-left: 5px;
+}
+a.v-btn--active.v-btn.v-btn--flat.v-btn--router.v-btn--text.theme--light.v-size--default {
+    color: $green;
+    border-bottom: 1px solid $green;
+}
+.v-toolbar__content, .v-toolbar__extension {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main.v-content {
+    width: 1200px;
+    margin: 0 auto;
+    padding:
+     20px 4px 0px !important;
+}
+
+.v-toolbar__extension {
+    height: 44px !important;
+}
+nav .v-toolbar__title{
+    color: $green;
+}
+
+@media only screen and (max-width:599px) {
+    header.app-bar.v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--extended.v-toolbar--flat,.v-toolbar__extension{
+        height: 56px!important;
+    }
+}

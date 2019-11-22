@@ -1,32 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app >
+      <top-navigation :navigation='navigation'></top-navigation>
+      <v-content>
+          <router-view></router-view>
+      </v-content>
+      <!-- <bottom-navigation :navigation='navigation'></bottom-navigation> -->
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import HelloWorld from './components/HelloWorld';
+import TopNavigation from '@/components/Navigation/TopNavigation'
+import BottomNavigation from '@/components/Navigation/BottomNavigation'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+    TopNavigation,
+    BottomNavigation
+  },
+  data(){
+    return{
+     navigation: [
+      {link: "/", name:"Home", icon: "mdi-home"},
+      {link: "/about", name:"About", icon: "mdi-contact-mail"},
+    ]
     }
   }
-}
-</style>
+   
+
+};
+
+
+
+</script>
